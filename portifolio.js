@@ -92,6 +92,7 @@ function updateProgressText(state, circle) {
 progresso2.animate(0.75, {
   step: updateProgressText
 });
+
     
 
 
