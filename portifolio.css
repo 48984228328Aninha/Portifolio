@@ -25,6 +25,19 @@ section, #corpo, #sobremim, #experiencia, #competencias, #projetos8 {
 #textsob {
   text-align: center;
   width: 100%;
+  height: 100%;
+  margin-bottom: -200px;
+  margin-top: 400px;
+}
+
+#tituloFormacao {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+#tituloTec {
+  margin-top: 200px;
+  margin-bottom: 100px;
 }
 
 
@@ -452,17 +465,26 @@ header.container {
   padding: 60px 0;
   gap: 40px; /* espaço entre título e conteúdo */
   width: 100%;
-  height: 100%;
-  border-radius: 15%;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: rgb(11, 1, 52) 1px solid;
+  height: 650px;
+    border: none;
+    box-shadow: rgb(77, 5, 144) 0px 0px 500px 3px;
         margin-top: 300px;
-
-
-  box-shadow: 0 0 800px 2px blue;
+        background: linear-gradient(135deg, #0f0245, #2d0395);
+  animation: fundoanimado 12s ease-in-out;
 }
 
+@keyframes fundoanimado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
 #textsob {
   font-size: 6em;
   color: white;
@@ -542,8 +564,8 @@ header.container {
   height: 280px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgb(43, 0, 255);
-  box-shadow: 0 0 40px #3f19ff;
+  border: 2px solid #ff057a;
+  /*background: linear-gradient(35deg, #ffc400, #ff057a);*/
   transition: transform 0.3s ease;
   margin-top: 50px;
   margin-right: -30px;
@@ -575,7 +597,7 @@ header.container {
     font-family: monospace;
     font-size: 2em;
     color: white;
-    text-shadow: 0 0 20px #3f19ff;
+    text-shadow: 0 0 20px #ff057a;
 }
 #container-cards {
     display: flex;
@@ -591,7 +613,15 @@ header.container {
     padding: 20px 0;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+    
 }
+
+#container-cards p {
+  font-size: 0.90em;
+  color: gainsboro;
+  font-family: cursive;
+}
+
 
 #container-cards::-webkit-scrollbar {
   height: 8px;
@@ -605,12 +635,13 @@ header.container {
 .card {
   flex: 0 0 300px;                 
   scroll-snap-align: start;        
-  background: linear-gradient(35deg, #0f0245, #0e028b);
+  
   color: #fff;
   border-radius: 12px;
   padding: 20px;
   box-sizing: border-box;
   min-width: 900px;
+  
 }
 
 .card p, .card h3, .card a {
@@ -645,21 +676,39 @@ header.container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(35deg, #6843f9, #9f7be7);
+    background: linear-gradient(35deg, #14b8a6, #7c3aed);
     border-radius: 20px;
-    border: 0.5px solid rgb(6, 78, 211, 0.3);
+    border: none;
     text-align: center;
     box-sizing: border-box;
     cursor: pointer;
     color: rgb(2, 2, 110);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: cardscor 10s ease-in-out infinite;
+    background-size: 150% 150%;
+    box-shadow:
+  0 12px 24px rgba(0, 0, 0, 0.45),
+  0 0 24px rgba(124, 58, 237, 0.22);
+    
 }
 
 #card1:hover, #card2:hover, #card3:hover {
-    transform: scaleX(105%);
+    transform: scale(90%);
     transition: transform 0.5s ease-in;
-
 }
+
+@keyframes cardscor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 #tamanho1, #tamanho2, #tamanho3 {
     font-size: 1rem;
@@ -669,6 +718,7 @@ header.container {
 #titulo1, #titulo2, #titulo3 {
     color: white;
     font-family: monospace;
+    font-size: 1.5em;
     
 }
 
@@ -733,7 +783,7 @@ header.container {
 #formacao2 {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(35deg, #3f17de, #9f7be7);
+  background: linear-gradient(35deg, #14b8a6, #7c3aed);
   border-radius: 30px;
   text-align: center;
   margin-top: -90px;
@@ -759,8 +809,43 @@ header.container {
   color: #0e028b;
 }
 
+#formacao2 {
+  background-size: 300% 200%;
+  animation: animarcard 12s ease-in-out infinite;
+}
+
 #formacao3 {
-  background: linear-gradient(35deg, #3f17de, #9f7be7);
+  animation: animarcard1 12s ease-in-out infinite;
+}
+
+@keyframes animarcard {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  
+}
+
+@keyframes animarcard1 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  
+}
+
+#formacao3 {
+  background: linear-gradient(35deg, #14b8a6, #7c3aed);
   margin-top: 40px;
   border-radius: 30px;
   text-align: center;
@@ -770,14 +855,16 @@ header.container {
   border: rgb(1, 1, 108) 1px solid;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-family: monospace;
+  background-size: 200% 200%;
 }
+
 #tituloFormacao {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 4em;
 }
 #academica {
   color: transparent;
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-stroke: 1px white;
 }
 
 #curso, #ensinoMedio {
@@ -1061,6 +1148,7 @@ header.container {
   display: flex;
   justify-content: center;
   margin-top: 120px;
+  margin-bottom: 50px;
 }
 
 #textoExperiencia, #textoExperiencia2 {
@@ -1141,7 +1229,7 @@ header.container {
   align-items: flex-start;
   gap: 50px; /* espaço entre os dois cards */
   flex-wrap: wrap; /* permite quebrar em telas menores */
-  margin-top: 200px;
+  margin-top: 700px;
   padding: 40px 20px;
   width: 100%;
   max-width: 1300px;
@@ -1160,6 +1248,7 @@ header.container {
   margin: 100px auto;
   max-width: 900px;
   box-sizing: border-box;
+  margin-top: 700px;
 }
 
 /* --- Cada card individual --- */
